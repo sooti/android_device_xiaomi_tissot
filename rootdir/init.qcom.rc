@@ -35,6 +35,7 @@ on early-init
     chmod 0620 /dev/kmsg
 
 on init
+    export LD_SHIM_LIBS /system/lib/libMiCameraHal.so|libshim_MiCamera.so
     # Set permissions for persist partition
     mkdir /persist 0771 root system
 
@@ -51,6 +52,9 @@ on init
 
 on post-fs
     chmod 0755 /sys/kernel/debug/tracing
+    # Create folder for mm-qcamera-daemon
+    mkdir /data/misc/camera 0770 camera camera
+    setprop persist.camera.stats.test 5
 
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB

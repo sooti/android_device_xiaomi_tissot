@@ -22,6 +22,7 @@ etc/firmware/rampatch_tlv_3.0.tlv
 etc/firmware/rampatch_tlv_3.2.tlv
 
 # Camera - from stock miui 7.5.4
+lib/libMiCameraHal.so|3ae2f2148ff3556102328ca67c7c6d0c4a460b80
 bin/mm-qcamera-daemon|0e0922a2a47bc0779b725ff6609fab1945018f6a
 vendor/lib/libChamomilePA.so|91b057183b30a8ea6f617ad64f0eeb23efd6bd10
 vendor/lib/libchromaflash.so|cf85560822e04014b8950a1abae9c2843069101d
