@@ -79,6 +79,9 @@ on init
    chmod 0664 sys/class/power_supply/battery/constant_charge_current_max
    chmod 0664 sys/kernel/debug/camera/logsync
 
+# default country code
+setprop ro.boot.wificountrycode 00
+
 # Allow usb charging to be disabled peristently
 on property:persist.usb.chgdisabled=1
     write /sys/class/power_supply/battery/charging_enabled 0
