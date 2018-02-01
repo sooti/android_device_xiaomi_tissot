@@ -255,7 +255,9 @@ PRODUCT_COPY_FILES += \
 # IPA Manager
 PRODUCT_PACKAGES += \
     ipacm \
-    IPACM_cfg.xml
+    IPACM_cfg.xml \
+    liboffloadhal \
+    ipacm-diag
 
 # IRQ
 PRODUCT_COPY_FILES += \
