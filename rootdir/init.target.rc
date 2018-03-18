@@ -241,3 +241,8 @@ service energy-awareness /system/vendor/bin/energy-awareness
 
 on boot
     write /sys/bus/msm_subsys/devices/subsys4/restart_level related
+
+# The only way for now to init the camera correctly is with this hack, we need to fix this in the furture
+on property:sys.boot_completed=1
+	stop cameraserver
+	start cameraserver
