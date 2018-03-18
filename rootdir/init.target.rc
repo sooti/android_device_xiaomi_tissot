@@ -241,3 +241,7 @@ service energy-awareness /system/vendor/bin/energy-awareness
 
 on boot
     write /sys/bus/msm_subsys/devices/subsys4/restart_level related
+
+# This is a temporary solution to get mm-qcamera-daemon going, we should invistigate why it floods the cpu otherwise
+    stop mm-qcamera-daemon
+    start mm-qcamera-daemon
