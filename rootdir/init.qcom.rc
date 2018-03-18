@@ -493,13 +493,6 @@ service port-bridge /system/vendor/bin/port-bridge
     disabled
     oneshot
 
-# QMUX must be in multiple groups to support external process connections
-service qmuxd /system/vendor/bin/qmuxd
-    class main
-    user root
-    group radio audio bluetooth gps nfc diag
-    disabled
-
 service netmgrd /system/vendor/bin/netmgrd
     class main
     disabled
@@ -509,12 +502,6 @@ service ipacm-diag /system/vendor/bin/ipacm-diag
     user radio
     socket ipacm_log_file dgram 660 radio radio
     group radio diag oem_2901
-    disabled
-
-service ipacm /system/vendor/bin/ipacm
-    class main
-    user radio
-    group radio inet
     disabled
 
 service qti /system/vendor/bin/qti
