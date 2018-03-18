@@ -131,7 +131,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0_vendor \
     camera.device@1.0-impl \
     camera.device@3.2-impl \
-    libshim_Camera \
+    libshims_skia \
     camera.msm8953 \
     libmm-qcamera
 
