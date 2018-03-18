@@ -123,8 +123,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    Snap \
-    MiuiCamera
+    Snap
 
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
@@ -133,7 +132,10 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0_vendor \
     camera.device@1.0-impl \
     camera.device@3.2-impl \
-    libshim_MiCamera
+    libshim_Camera \
+    camera.msm8953 \
+    libmm-qcamera
+
 
 # Configstore
 PRODUCT_PACKAGES += \
