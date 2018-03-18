@@ -190,9 +190,6 @@ on boot
     # Create directory used for display
     mkdir /persist/display 0770 system graphics
 
-    # Create vpp directory
-    mkdir /persist/vpp 0770 media media
-
 # msm specific files that need to be created on /data
 on post-fs-data
     mkdir /data/vendor/misc 01771 system system
@@ -224,9 +221,6 @@ on post-fs-data
 
     # Create directory for apps access via QTEEConnector
     mkdir /data/vendor/qtee 0770 system system
-
-    # Create directory for voiceprint
-    mkdir /data/misc/qvop 0771 system system
 
     #Create folder for mm-qcamera-daemon
     mkdir /data/misc/camera 0770 camera camera
@@ -385,9 +379,6 @@ on post-fs-data
     # set aggressive read ahead for dm-0 and dm-1 during boot up
     write /sys/block/dm-0/queue/read_ahead_kb 2048
     write /sys/block/dm-1/queue/read_ahead_kb 2048
-
-    # Create vpp directory
-    mkdir /data/vendor/vpp 0770 media media
 
     #Create FTM_AP dir for factory test
     mkdir /data/FTM_AP 0775 system system
@@ -605,11 +596,6 @@ service qcom-post-boot /vendor/bin/init.qcom.post_boot.sh
 on property:sys.boot_completed=1
     start qcom-post-boot
 
-service qvop-daemon /vendor/bin/qvop-daemon
-    class late_start
-    user system
-    group system drmrpc
-
 service atfwd /vendor/bin/ATFWD-daemon
     class late_start
     user system
@@ -684,11 +670,6 @@ on charger
 on property:init.svc.surfaceflinger=restarting
     stop hwcomposer-2-1
     start hwcomposer-2-1
-
-service vppservice /vendor/bin/vppservice
-    class main
-    user media
-    group camera
 
 service goodixfpd vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service
       class core
