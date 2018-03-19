@@ -44,7 +44,7 @@ on fs
     # results in failure to launch late-start class.
 
     wait /dev/block/bootdevice/by-name/persist
-    mount ext4 /dev/block/bootdevice/by-name/persist /persist noatime nosuid nodev barrier=1
+    wmount ext4 /dev/block/bootdevice/by-name/persist /persist noatime nosuid nodev barrier=1
     mkdir /persist/data 0700  system system
     mkdir /persist/bms 0700 root system
     restorecon_recursive   /persist
@@ -244,5 +244,5 @@ on boot
 
 # The only way for now to init the camera correctly is with this hack, we need to fix this in the furture
 on property:sys.boot_completed=1
-	stop cameraserver
-	start cameraserver
+    stop cameraserver
+    start cameraserver
