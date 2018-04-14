@@ -130,7 +130,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     camera.msm8953 \
     libmm-qcamera \
-    libshims_skia \
     SnapdragonCamera
 
 PRODUCT_PACKAGES += \
