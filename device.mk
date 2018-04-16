@@ -417,7 +417,6 @@ PRODUCT_PACKAGES += \
     libcurl
 
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0 \
     android.hardware.wifi@1.0-service
 
 PRODUCT_COPY_FILES += \
