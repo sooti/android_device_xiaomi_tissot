@@ -38,6 +38,13 @@ PRODUCT_PACKAGES += \
     update_engine_sideload \
     update_verifier
 
+
+# AOSP Packages
+PRODUCT_PACKAGES += \
+    Launcher3 \
+    messaging \
+    Terminal
+
 # The following modules are included in debuggable builds only.
 PRODUCT_PACKAGES_DEBUG += \
     bootctl \
